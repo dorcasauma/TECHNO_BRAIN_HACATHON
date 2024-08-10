@@ -2,7 +2,11 @@ num = input()
 
 no_dups = []
 for i in num:
-    i = int(i)
+    try:
+        i = int(i)
+    except:
+        print("Please enter only numbers, you entered: ", i)
+        continue
     if i in no_dups:
         pass
     else:
